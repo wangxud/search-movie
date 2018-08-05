@@ -68,9 +68,9 @@ RUN set -x \
   && yum clean all
 
 # 若要使用https，请将以下三个注释去掉,并在ssl文件夹中添加你自己申请的两个证书文件
-  #&& mkdir -p /etc/nginx/cert
-#COPY ssl/nginx.pem /etc/nginx/cert/nginx.pem
-#COPY ssl/nginx.key /etc/nginx/cert/nginx.key
+  && mkdir -p /etc/nginx/cert
+COPY ssl/214883199760827.pem /etc/nginx/cert/214883199760827.pem
+COPY ssl/214883199760827.key /etc/nginx/cert/214883199760827.key
 
 CMD ["/usr/sbin/nginx","-g","daemon off;"]
 

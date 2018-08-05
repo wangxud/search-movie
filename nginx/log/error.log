@@ -105,3 +105,6 @@
 2018/08/05 01:01:12 [emerg] 1#1: host not found in upstream "search-movie" in /etc/nginx/nginx.conf:46
 2018/08/05 02:10:01 [emerg] 1#1: host not found in upstream "search-movie" in /etc/nginx/nginx.conf:46
 2018/08/05 02:32:33 [emerg] 1#1: host not found in upstream "search-movie" in /etc/nginx/nginx.conf:46
+2018/08/05 07:33:46 [emerg] 1#1: host not found in upstream "search-movie" in /etc/nginx/nginx.conf:46
+2018/08/05 07:33:52 [error] 6#6: *5 connect() failed (111: Connection refused) while connecting to upstream, client: 172.19.0.1, server: localhost, request: "GET / HTTP/1.1", upstream: "http://172.19.0.5:8081/", host: "wxdvoid.com"
+2018/08/05 07:41:48 [emerg] 1#1: host not found in upstream "search-movie" in /etc/nginx/nginx.conf:46

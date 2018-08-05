@@ -5,7 +5,6 @@ version: '2.2'
 services:
   nginx:
      build: ./nginx
-     #image: search-movie_nginx
      container_name: nginx
      restart: always
      ports:
@@ -21,14 +20,17 @@ services:
     restart: always
     container_name: mongodb
     hostname: mongodb
-    ports:
-    - "27018:27017"
+    #ports:
+    #- "27018:27017"
+    expose:
+      - "27017"
 
   redis:
       build: ./redis
-      #image: search-movie_redis
-      ports:
-        - "6380:6379"
+      #ports:
+      #  - "6380:6379"
+      expose:
+        - "6379"
       volumes:
         - ./redis/redis.conf:/usr/local/redis/redis.conf
         - ./redis/redis.log:/usr/local/redis/redis.log
