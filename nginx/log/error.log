@@ -1,0 +1,107 @@
+2018/08/04 13:36:22 [error] 7#7: *1 directory index of "/usr/share/nginx/html/" is forbidden, client: 172.19.0.1, server: localhost, request: "GET / HTTP/1.1", host: "localhost:91"
+2018/08/04 13:36:23 [error] 7#7: *1 open() "/usr/share/nginx/html/favicon.ico" failed (2: No such file or directory), client: 172.19.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "localhost:91", referrer: "http://localhost:91/"
+2018/08/04 13:36:33 [error] 7#7: *1 directory index of "/usr/share/nginx/html/" is forbidden, client: 172.19.0.1, server: localhost, request: "GET / HTTP/1.1", host: "localhost:91"
+2018/08/04 13:39:52 [error] 7#7: *6 directory index of "/usr/share/nginx/html/" is forbidden, client: 172.19.0.1, server: localhost, request: "GET / HTTP/1.1", host: "localhost:91"
+2018/08/04 13:39:55 [error] 7#7: *6 directory index of "/usr/share/nginx/html/" is forbidden, client: 172.19.0.1, server: localhost, request: "GET / HTTP/1.1", host: "localhost:91"
+2018/08/04 13:39:55 [error] 7#7: *6 directory index of "/usr/share/nginx/html/" is forbidden, client: 172.19.0.1, server: localhost, request: "GET / HTTP/1.1", host: "localhost:91"
+2018/08/04 13:40:59 [error] 7#7: *1 directory index of "/usr/share/nginx/html/" is forbidden, client: 172.19.0.1, server: localhost, request: "GET / HTTP/1.1", host: "127.0.0.1:91"
+2018/08/04 13:40:59 [error] 7#7: *1 open() "/usr/share/nginx/html/favicon.ico" failed (2: No such file or directory), client: 172.19.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "127.0.0.1:91", referrer: "http://127.0.0.1:91/"
+2018/08/04 13:45:51 [emerg] 1#1: unknown directive "index.html" in /etc/nginx/nginx.conf:46
+2018/08/04 13:45:52 [emerg] 1#1: unknown directive "index.html" in /etc/nginx/nginx.conf:46
+2018/08/04 13:45:53 [emerg] 1#1: unknown directive "index.html" in /etc/nginx/nginx.conf:46
+2018/08/04 13:45:54 [emerg] 1#1: unknown directive "index.html" in /etc/nginx/nginx.conf:46
+2018/08/04 13:45:56 [emerg] 1#1: unknown directive "index.html" in /etc/nginx/nginx.conf:46
+2018/08/04 13:45:58 [emerg] 1#1: unknown directive "index.html" in /etc/nginx/nginx.conf:46
+2018/08/04 13:46:02 [emerg] 1#1: unknown directive "index.html" in /etc/nginx/nginx.conf:46
+2018/08/04 13:46:09 [emerg] 1#1: unknown directive "index.html" in /etc/nginx/nginx.conf:46
+2018/08/04 13:46:23 [emerg] 1#1: unknown directive "index.html" in /etc/nginx/nginx.conf:46
+2018/08/04 13:46:49 [emerg] 1#1: unknown directive "index.html" in /etc/nginx/nginx.conf:46
+2018/08/04 13:48:26 [emerg] 1#1: unexpected ";" in /etc/nginx/nginx.conf:49
+2018/08/04 13:48:27 [emerg] 1#1: unexpected ";" in /etc/nginx/nginx.conf:49
+2018/08/04 13:48:28 [emerg] 1#1: unexpected ";" in /etc/nginx/nginx.conf:49
+2018/08/04 13:48:29 [emerg] 1#1: unexpected ";" in /etc/nginx/nginx.conf:49
+2018/08/04 13:48:31 [emerg] 1#1: unexpected ";" in /etc/nginx/nginx.conf:49
+2018/08/04 13:48:33 [emerg] 1#1: unexpected ";" in /etc/nginx/nginx.conf:49
+2018/08/04 13:48:37 [emerg] 1#1: unexpected ";" in /etc/nginx/nginx.conf:49
+2018/08/04 13:48:45 [emerg] 1#1: unexpected ";" in /etc/nginx/nginx.conf:49
+2018/08/04 13:48:58 [emerg] 1#1: unexpected ";" in /etc/nginx/nginx.conf:49
+2018/08/04 13:49:16 [error] 7#7: *3 open() "/usr/local/nginx/html/image" failed (2: No such file or directory), client: 172.19.0.1, server: localhost, request: "GET /image HTTP/1.1", host: "localhost:91"
+2018/08/04 13:49:16 [error] 7#7: *4 "/usr/share/nginx/html/image/index.html" is not found (2: No such file or directory), client: 172.19.0.1, server: localhost, request: "GET /image/ HTTP/1.1", host: "localhost:91"
+2018/08/04 13:49:21 [error] 7#7: *1 "/usr/share/nginx/html/image/index.html" is not found (2: No such file or directory), client: 172.19.0.1, server: localhost, request: "GET /image/ HTTP/1.1", host: "localhost:91"
+2018/08/04 14:46:57 [error] 7#7: *1 "/usr/share/nginx/html/image/index.html" is not found (2: No such file or directory), client: 172.19.0.1, server: localhost, request: "GET /image/ HTTP/1.1", host: "localhost:91"
+2018/08/04 15:56:01 [error] 7#7: *1 open() "/usr/share/nginx/html/video" failed (2: No such file or directory), client: 172.19.0.1, server: localhost, request: "GET /video HTTP/1.1", host: "localhost:91"
+2018/08/04 15:56:10 [error] 7#7: *1 open() "/usr/share/nginx/html/video/wx.mp4" failed (2: No such file or directory), client: 172.19.0.1, server: localhost, request: "GET /video/wx.mp4 HTTP/1.1", host: "localhost:91"
+2018/08/04 16:17:12 [error] 6#6: *1 open() "/usr/share/nginx/html/favicon.ico" failed (2: No such file or directory), client: 172.19.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2018/08/04 16:18:16 [error] 6#6: *3 open() "/usr/share/nginx/html/favicon.ico" failed (2: No such file or directory), client: 172.19.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "wxdvoid.com", referrer: "http://wxdvoid.com/"
+2018/08/04 16:21:46 [emerg] 1#1: unknown log format "main" in /etc/nginx/nginx.conf:42
+2018/08/04 16:21:49 [emerg] 1#1: unknown log format "main" in /etc/nginx/nginx.conf:42
+2018/08/04 16:21:50 [emerg] 1#1: unknown log format "main" in /etc/nginx/nginx.conf:42
+2018/08/04 16:21:51 [emerg] 1#1: unknown log format "main" in /etc/nginx/nginx.conf:42
+2018/08/04 16:21:53 [emerg] 1#1: unknown log format "main" in /etc/nginx/nginx.conf:42
+2018/08/04 16:21:55 [emerg] 1#1: unknown log format "main" in /etc/nginx/nginx.conf:42
+2018/08/04 16:21:59 [emerg] 1#1: unknown log format "main" in /etc/nginx/nginx.conf:42
+2018/08/04 16:22:06 [emerg] 1#1: unknown log format "main" in /etc/nginx/nginx.conf:42
+2018/08/04 16:22:20 [emerg] 1#1: unknown log format "main" in /etc/nginx/nginx.conf:42
+2018/08/04 16:22:46 [emerg] 1#1: unknown log format "main" in /etc/nginx/nginx.conf:42
+2018/08/04 16:23:38 [emerg] 1#1: unknown log format "main" in /etc/nginx/nginx.conf:42
+2018/08/04 16:24:39 [emerg] 1#1: unknown log format "main" in /etc/nginx/nginx.conf:42
+2018/08/04 16:25:39 [emerg] 1#1: unknown log format "main" in /etc/nginx/nginx.conf:42
+2018/08/04 16:26:40 [emerg] 1#1: BIO_new_file("/etc/nginx/cert/nginx.pem") failed (SSL: error:02001002:system library:fopen:No such file or directory:fopen('/etc/nginx/cert/nginx.pem','r') error:2006D080:BIO routines:BIO_new_file:no such file)
+2018/08/04 16:27:41 [emerg] 1#1: BIO_new_file("/etc/nginx/cert/nginx.pem") failed (SSL: error:02001002:system library:fopen:No such file or directory:fopen('/etc/nginx/cert/nginx.pem','r') error:2006D080:BIO routines:BIO_new_file:no such file)
+2018/08/04 16:28:41 [emerg] 1#1: BIO_new_file("/etc/nginx/cert/214652882300949.pem") failed (SSL: error:02001002:system library:fopen:No such file or directory:fopen('/etc/nginx/cert/214652882300949.pem','r') error:2006D080:BIO routines:BIO_new_file:no such file)
+2018/08/04 16:29:42 [emerg] 1#1: BIO_new_file("/etc/nginx/cert/214652882300949.pem") failed (SSL: error:02001002:system library:fopen:No such file or directory:fopen('/etc/nginx/cert/214652882300949.pem','r') error:2006D080:BIO routines:BIO_new_file:no such file)
+2018/08/04 16:30:43 [emerg] 1#1: BIO_new_file("/etc/nginx/cert/214652882300949.pem") failed (SSL: error:02001002:system library:fopen:No such file or directory:fopen('/etc/nginx/cert/214652882300949.pem','r') error:2006D080:BIO routines:BIO_new_file:no such file)
+2018/08/04 16:31:14 [emerg] 1#1: BIO_new_file("/etc/nginx/cert/214652882300949.pem") failed (SSL: error:02001002:system library:fopen:No such file or directory:fopen('/etc/nginx/cert/214652882300949.pem','r') error:2006D080:BIO routines:BIO_new_file:no such file)
+2018/08/04 16:31:15 [emerg] 1#1: BIO_new_file("/etc/nginx/cert/214652882300949.pem") failed (SSL: error:02001002:system library:fopen:No such file or directory:fopen('/etc/nginx/cert/214652882300949.pem','r') error:2006D080:BIO routines:BIO_new_file:no such file)
+2018/08/04 16:31:17 [emerg] 1#1: BIO_new_file("/etc/nginx/cert/214652882300949.pem") failed (SSL: error:02001002:system library:fopen:No such file or directory:fopen('/etc/nginx/cert/214652882300949.pem','r') error:2006D080:BIO routines:BIO_new_file:no such file)
+2018/08/04 16:31:18 [emerg] 1#1: BIO_new_file("/etc/nginx/cert/214652882300949.pem") failed (SSL: error:02001002:system library:fopen:No such file or directory:fopen('/etc/nginx/cert/214652882300949.pem','r') error:2006D080:BIO routines:BIO_new_file:no such file)
+2018/08/04 16:31:19 [emerg] 1#1: BIO_new_file("/etc/nginx/cert/214652882300949.pem") failed (SSL: error:02001002:system library:fopen:No such file or directory:fopen('/etc/nginx/cert/214652882300949.pem','r') error:2006D080:BIO routines:BIO_new_file:no such file)
+2018/08/04 16:31:26 [emerg] 1#1: BIO_new_file("/etc/nginx/cert/214652882300949.pem") failed (SSL: error:02001002:system library:fopen:No such file or directory:fopen('/etc/nginx/cert/214652882300949.pem','r') error:2006D080:BIO routines:BIO_new_file:no such file)
+2018/08/04 16:31:30 [emerg] 1#1: BIO_new_file("/etc/nginx/cert/214652882300949.pem") failed (SSL: error:02001002:system library:fopen:No such file or directory:fopen('/etc/nginx/cert/214652882300949.pem','r') error:2006D080:BIO routines:BIO_new_file:no such file)
+2018/08/04 16:31:37 [emerg] 1#1: BIO_new_file("/etc/nginx/cert/214652882300949.pem") failed (SSL: error:02001002:system library:fopen:No such file or directory:fopen('/etc/nginx/cert/214652882300949.pem','r') error:2006D080:BIO routines:BIO_new_file:no such file)
+2018/08/04 16:31:51 [emerg] 1#1: BIO_new_file("/etc/nginx/cert/214652882300949.pem") failed (SSL: error:02001002:system library:fopen:No such file or directory:fopen('/etc/nginx/cert/214652882300949.pem','r') error:2006D080:BIO routines:BIO_new_file:no such file)
+2018/08/04 16:32:17 [emerg] 1#1: BIO_new_file("/etc/nginx/cert/214652882300949.pem") failed (SSL: error:02001002:system library:fopen:No such file or directory:fopen('/etc/nginx/cert/214652882300949.pem','r') error:2006D080:BIO routines:BIO_new_file:no such file)
+2018/08/04 16:33:09 [emerg] 1#1: BIO_new_file("/etc/nginx/cert/214652882300949.pem") failed (SSL: error:02001002:system library:fopen:No such file or directory:fopen('/etc/nginx/cert/214652882300949.pem','r') error:2006D080:BIO routines:BIO_new_file:no such file)
+2018/08/04 16:34:09 [emerg] 1#1: BIO_new_file("/etc/nginx/cert/214652882300949.pem") failed (SSL: error:02001002:system library:fopen:No such file or directory:fopen('/etc/nginx/cert/214652882300949.pem','r') error:2006D080:BIO routines:BIO_new_file:no such file)
+2018/08/04 16:35:10 [emerg] 1#1: BIO_new_file("/etc/nginx/cert/214652882300949.pem") failed (SSL: error:02001002:system library:fopen:No such file or directory:fopen('/etc/nginx/cert/214652882300949.pem','r') error:2006D080:BIO routines:BIO_new_file:no such file)
+2018/08/04 16:36:11 [emerg] 1#1: BIO_new_file("/etc/nginx/cert/214652882300949.pem") failed (SSL: error:02001002:system library:fopen:No such file or directory:fopen('/etc/nginx/cert/214652882300949.pem','r') error:2006D080:BIO routines:BIO_new_file:no such file)
+2018/08/04 16:37:11 [emerg] 1#1: BIO_new_file("/etc/nginx/cert/214652882300949.pem") failed (SSL: error:02001002:system library:fopen:No such file or directory:fopen('/etc/nginx/cert/214652882300949.pem','r') error:2006D080:BIO routines:BIO_new_file:no such file)
+2018/08/04 16:38:12 [emerg] 1#1: BIO_new_file("/etc/nginx/cert/214883199760827.pem") failed (SSL: error:02001002:system library:fopen:No such file or directory:fopen('/etc/nginx/cert/214883199760827.pem','r') error:2006D080:BIO routines:BIO_new_file:no such file)
+2018/08/04 16:38:41 [emerg] 1#1: BIO_new_file("/etc/nginx/cert/214883199760827.pem") failed (SSL: error:02001002:system library:fopen:No such file or directory:fopen('/etc/nginx/cert/214883199760827.pem','r') error:2006D080:BIO routines:BIO_new_file:no such file)
+2018/08/04 16:38:42 [emerg] 1#1: BIO_new_file("/etc/nginx/cert/214883199760827.pem") failed (SSL: error:02001002:system library:fopen:No such file or directory:fopen('/etc/nginx/cert/214883199760827.pem','r') error:2006D080:BIO routines:BIO_new_file:no such file)
+2018/08/04 16:38:45 [emerg] 1#1: BIO_new_file("/etc/nginx/cert/214883199760827.pem") failed (SSL: error:02001002:system library:fopen:No such file or directory:fopen('/etc/nginx/cert/214883199760827.pem','r') error:2006D080:BIO routines:BIO_new_file:no such file)
+2018/08/04 16:38:46 [emerg] 1#1: BIO_new_file("/etc/nginx/cert/214883199760827.pem") failed (SSL: error:02001002:system library:fopen:No such file or directory:fopen('/etc/nginx/cert/214883199760827.pem','r') error:2006D080:BIO routines:BIO_new_file:no such file)
+2018/08/04 16:38:47 [emerg] 1#1: BIO_new_file("/etc/nginx/cert/214883199760827.pem") failed (SSL: error:02001002:system library:fopen:No such file or directory:fopen('/etc/nginx/cert/214883199760827.pem','r') error:2006D080:BIO routines:BIO_new_file:no such file)
+2018/08/04 16:38:50 [emerg] 1#1: BIO_new_file("/etc/nginx/cert/214883199760827.pem") failed (SSL: error:02001002:system library:fopen:No such file or directory:fopen('/etc/nginx/cert/214883199760827.pem','r') error:2006D080:BIO routines:BIO_new_file:no such file)
+2018/08/04 16:38:57 [emerg] 1#1: BIO_new_file("/etc/nginx/cert/214883199760827.pem") failed (SSL: error:02001002:system library:fopen:No such file or directory:fopen('/etc/nginx/cert/214883199760827.pem','r') error:2006D080:BIO routines:BIO_new_file:no such file)
+2018/08/04 16:39:04 [emerg] 1#1: BIO_new_file("/etc/nginx/cert/214883199760827.pem") failed (SSL: error:02001002:system library:fopen:No such file or directory:fopen('/etc/nginx/cert/214883199760827.pem','r') error:2006D080:BIO routines:BIO_new_file:no such file)
+2018/08/04 16:39:17 [emerg] 1#1: BIO_new_file("/etc/nginx/cert/214883199760827.pem") failed (SSL: error:02001002:system library:fopen:No such file or directory:fopen('/etc/nginx/cert/214883199760827.pem','r') error:2006D080:BIO routines:BIO_new_file:no such file)
+2018/08/04 16:39:43 [emerg] 1#1: BIO_new_file("/etc/nginx/cert/214883199760827.pem") failed (SSL: error:02001002:system library:fopen:No such file or directory:fopen('/etc/nginx/cert/214883199760827.pem','r') error:2006D080:BIO routines:BIO_new_file:no such file)
+2018/08/04 16:40:35 [emerg] 1#1: BIO_new_file("/etc/nginx/cert/214883199760827.pem") failed (SSL: error:02001002:system library:fopen:No such file or directory:fopen('/etc/nginx/cert/214883199760827.pem','r') error:2006D080:BIO routines:BIO_new_file:no such file)
+2018/08/04 16:41:36 [emerg] 1#1: BIO_new_file("/etc/nginx/cert/214883199760827.pem") failed (SSL: error:02001002:system library:fopen:No such file or directory:fopen('/etc/nginx/cert/214883199760827.pem','r') error:2006D080:BIO routines:BIO_new_file:no such file)
+2018/08/04 16:42:37 [emerg] 1#1: unknown directive "//" in /etc/nginx/nginx.conf:47
+2018/08/04 16:43:37 [emerg] 1#1: BIO_new_file("/etc/nginx/cert/214883199760827.pem") failed (SSL: error:02001002:system library:fopen:No such file or directory:fopen('/etc/nginx/cert/214883199760827.pem','r') error:2006D080:BIO routines:BIO_new_file:no such file)
+2018/08/04 16:44:38 [emerg] 1#1: BIO_new_file("/etc/nginx/cert/214883199760827.pem") failed (SSL: error:02001002:system library:fopen:No such file or directory:fopen('/etc/nginx/cert/214883199760827.pem','r') error:2006D080:BIO routines:BIO_new_file:no such file)
+2018/08/04 16:45:39 [emerg] 1#1: BIO_new_file("/etc/nginx/cert/214883199760827.pem") failed (SSL: error:02001002:system library:fopen:No such file or directory:fopen('/etc/nginx/cert/214883199760827.pem','r') error:2006D080:BIO routines:BIO_new_file:no such file)
+2018/08/04 16:46:39 [emerg] 1#1: BIO_new_file("/etc/nginx/cert/214883199760827.pem") failed (SSL: error:02001002:system library:fopen:No such file or directory:fopen('/etc/nginx/cert/214883199760827.pem','r') error:2006D080:BIO routines:BIO_new_file:no such file)
+2018/08/04 16:47:40 [emerg] 1#1: BIO_new_file("/etc/nginx/cert/214883199760827.pem") failed (SSL: error:02001002:system library:fopen:No such file or directory:fopen('/etc/nginx/cert/214883199760827.pem','r') error:2006D080:BIO routines:BIO_new_file:no such file)
+2018/08/04 16:48:41 [emerg] 1#1: BIO_new_file("/etc/nginx/cert/214883199760827.pem") failed (SSL: error:02001002:system library:fopen:No such file or directory:fopen('/etc/nginx/cert/214883199760827.pem','r') error:2006D080:BIO routines:BIO_new_file:no such file)
+2018/08/04 16:49:41 [emerg] 1#1: BIO_new_file("/etc/nginx/cert/214883199760827.pem") failed (SSL: error:02001002:system library:fopen:No such file or directory:fopen('/etc/nginx/cert/214883199760827.pem','r') error:2006D080:BIO routines:BIO_new_file:no such file)
+2018/08/04 16:50:42 [emerg] 1#1: BIO_new_file("/etc/nginx/cert/214883199760827.pem") failed (SSL: error:02001002:system library:fopen:No such file or directory:fopen('/etc/nginx/cert/214883199760827.pem','r') error:2006D080:BIO routines:BIO_new_file:no such file)
+2018/08/04 17:54:10 [emerg] 1#1: host not found in upstream "search-movie" in /etc/nginx/nginx.conf:46
+2018/08/04 17:54:11 [emerg] 1#1: BIO_new_file("/etc/nginx/cert/nginx.pem") failed (SSL: error:02001002:system library:fopen:No such file or directory:fopen('/etc/nginx/cert/nginx.pem','r') error:2006D080:BIO routines:BIO_new_file:no such file)
+2018/08/04 17:54:13 [emerg] 1#1: BIO_new_file("/etc/nginx/cert/nginx.pem") failed (SSL: error:02001002:system library:fopen:No such file or directory:fopen('/etc/nginx/cert/nginx.pem','r') error:2006D080:BIO routines:BIO_new_file:no such file)
+2018/08/04 17:54:14 [emerg] 1#1: BIO_new_file("/etc/nginx/cert/nginx.pem") failed (SSL: error:02001002:system library:fopen:No such file or directory:fopen('/etc/nginx/cert/nginx.pem','r') error:2006D080:BIO routines:BIO_new_file:no such file)
+2018/08/04 17:54:16 [emerg] 1#1: BIO_new_file("/etc/nginx/cert/nginx.pem") failed (SSL: error:02001002:system library:fopen:No such file or directory:fopen('/etc/nginx/cert/nginx.pem','r') error:2006D080:BIO routines:BIO_new_file:no such file)
+2018/08/04 17:54:18 [emerg] 1#1: BIO_new_file("/etc/nginx/cert/nginx.pem") failed (SSL: error:02001002:system library:fopen:No such file or directory:fopen('/etc/nginx/cert/nginx.pem','r') error:2006D080:BIO routines:BIO_new_file:no such file)
+2018/08/04 17:54:22 [emerg] 1#1: BIO_new_file("/etc/nginx/cert/nginx.pem") failed (SSL: error:02001002:system library:fopen:No such file or directory:fopen('/etc/nginx/cert/nginx.pem','r') error:2006D080:BIO routines:BIO_new_file:no such file)
+2018/08/04 17:54:29 [emerg] 1#1: BIO_new_file("/etc/nginx/cert/nginx.pem") failed (SSL: error:02001002:system library:fopen:No such file or directory:fopen('/etc/nginx/cert/nginx.pem','r') error:2006D080:BIO routines:BIO_new_file:no such file)
+2018/08/04 17:54:50 [emerg] 1#1: BIO_new_file("/etc/nginx/cert/nginx.pem") failed (SSL: error:02001002:system library:fopen:No such file or directory:fopen('/etc/nginx/cert/nginx.pem','r') error:2006D080:BIO routines:BIO_new_file:no such file)
+2018/08/04 17:55:16 [emerg] 1#1: BIO_new_file("/etc/nginx/cert/nginx.pem") failed (SSL: error:02001002:system library:fopen:No such file or directory:fopen('/etc/nginx/cert/nginx.pem','r') error:2006D080:BIO routines:BIO_new_file:no such file)
+2018/08/04 17:56:08 [emerg] 1#1: BIO_new_file("/etc/nginx/cert/nginx.pem") failed (SSL: error:02001002:system library:fopen:No such file or directory:fopen('/etc/nginx/cert/nginx.pem','r') error:2006D080:BIO routines:BIO_new_file:no such file)
+2018/08/04 17:58:39 [emerg] 1#1: host not found in upstream "search-movie" in /etc/nginx/nginx.conf:46
+2018/08/04 17:58:41 [emerg] 1#1: host not found in upstream "search-movie" in /etc/nginx/nginx.conf:46
+2018/08/05 00:32:03 [emerg] 1#1: host not found in upstream "search-movie" in /etc/nginx/nginx.conf:46
+2018/08/05 01:01:12 [emerg] 1#1: host not found in upstream "search-movie" in /etc/nginx/nginx.conf:46
+2018/08/05 02:10:01 [emerg] 1#1: host not found in upstream "search-movie" in /etc/nginx/nginx.conf:46
+2018/08/05 02:32:33 [emerg] 1#1: host not found in upstream "search-movie" in /etc/nginx/nginx.conf:46
