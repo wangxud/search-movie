@@ -108,3 +108,36 @@
 2018/08/05 07:33:46 [emerg] 1#1: host not found in upstream "search-movie" in /etc/nginx/nginx.conf:46
 2018/08/05 07:33:52 [error] 6#6: *5 connect() failed (111: Connection refused) while connecting to upstream, client: 172.19.0.1, server: localhost, request: "GET / HTTP/1.1", upstream: "http://172.19.0.5:8081/", host: "wxdvoid.com"
 2018/08/05 07:41:48 [emerg] 1#1: host not found in upstream "search-movie" in /etc/nginx/nginx.conf:46
+2018/08/05 09:07:42 [emerg] 1#1: host not found in upstream "search-movie" in /etc/nginx/nginx.conf:46
+2018/08/05 09:35:47 [emerg] 1#1: host not found in upstream "search-movie" in /etc/nginx/nginx.conf:49
+2018/08/05 09:38:34 [emerg] 1#1: host not found in upstream "search-movie" in /etc/nginx/nginx.conf:47
+2018/08/05 09:38:39 [error] 7#7: *5 connect() failed (111: Connection refused) while connecting to upstream, client: 172.19.0.1, server: , request: "GET / HTTP/1.1", upstream: "http://172.19.0.5:8081/", host: "wxdvoid.com"
+2018/08/05 09:38:39 [error] 7#7: *5 connect() failed (111: Connection refused) while connecting to upstream, client: 172.19.0.1, server: , request: "GET /favicon.ico HTTP/1.1", upstream: "http://172.19.0.5:8081/favicon.ico", host: "wxdvoid.com", referrer: "https://wxdvoid.com/"
+2018/08/05 09:38:40 [error] 7#7: *5 connect() failed (111: Connection refused) while connecting to upstream, client: 172.19.0.1, server: , request: "GET / HTTP/1.1", upstream: "http://172.19.0.5:8081/", host: "wxdvoid.com"
+2018/08/05 09:38:40 [error] 7#7: *5 connect() failed (111: Connection refused) while connecting to upstream, client: 172.19.0.1, server: , request: "GET /favicon.ico HTTP/1.1", upstream: "http://172.19.0.5:8081/favicon.ico", host: "wxdvoid.com", referrer: "https://wxdvoid.com/"
+2018/08/05 09:38:41 [error] 7#7: *5 connect() failed (111: Connection refused) while connecting to upstream, client: 172.19.0.1, server: , request: "GET / HTTP/1.1", upstream: "http://172.19.0.5:8081/", host: "wxdvoid.com"
+2018/08/05 09:38:41 [error] 7#7: *5 connect() failed (111: Connection refused) while connecting to upstream, client: 172.19.0.1, server: , request: "GET /favicon.ico HTTP/1.1", upstream: "http://172.19.0.5:8081/favicon.ico", host: "wxdvoid.com", referrer: "https://wxdvoid.com/"
+2018/08/05 09:38:41 [error] 7#7: *5 connect() failed (111: Connection refused) while connecting to upstream, client: 172.19.0.1, server: , request: "GET / HTTP/1.1", upstream: "http://172.19.0.5:8081/", host: "wxdvoid.com"
+2018/08/05 09:38:41 [error] 7#7: *5 connect() failed (111: Connection refused) while connecting to upstream, client: 172.19.0.1, server: , request: "GET /favicon.ico HTTP/1.1", upstream: "http://172.19.0.5:8081/favicon.ico", host: "wxdvoid.com", referrer: "https://wxdvoid.com/"
+2018/08/05 09:38:41 [error] 7#7: *5 connect() failed (111: Connection refused) while connecting to upstream, client: 172.19.0.1, server: , request: "GET / HTTP/1.1", upstream: "http://172.19.0.5:8081/", host: "wxdvoid.com"
+2018/08/05 09:38:41 [error] 7#7: *5 connect() failed (111: Connection refused) while connecting to upstream, client: 172.19.0.1, server: , request: "GET /favicon.ico HTTP/1.1", upstream: "http://172.19.0.5:8081/favicon.ico", host: "wxdvoid.com", referrer: "https://wxdvoid.com/"
+2018/08/05 09:41:18 [emerg] 1#1: host not found in upstream "search-movie" in /etc/nginx/nginx.conf:49
+2018/08/05 09:57:40 [emerg] 1#1: host not found in upstream "search-movie" in /etc/nginx/nginx.conf:49
+2018/08/05 09:58:15 [error] 7#7: *26 "/usr/share/nginx/html/static/index.html" is not found (2: No such file or directory), client: 172.19.0.1, server: _, request: "GET /static/ HTTP/1.1", host: "wxdvoid.com"
+2018/08/05 10:00:16 [emerg] 1#1: host not found in upstream "search-movie" in /etc/nginx/nginx.conf:49
+2018/08/05 10:00:24 [error] 6#6: *4 connect() failed (111: Connection refused) while connecting to upstream, client: 172.19.0.1, server: _, request: "GET /index.html HTTP/1.1", upstream: "http://172.19.0.5:8081/index.html", host: "wxdvoid.com"
+2018/08/05 10:06:16 [emerg] 1#1: host not found in upstream "search-movie" in /etc/nginx/nginx.conf:55
+2018/08/05 10:07:34 [error] 7#7: *16 open() "/usr/share/nginx/html/static/index.html" failed (2: No such file or directory), client: 172.19.0.1, server: _, request: "GET /static/index.html HTTP/1.1", host: "wxdvoid.com"
+2018/08/05 10:07:55 [error] 7#7: *16 open() "/usr/share/nginx/html/static/index.html" failed (2: No such file or directory), client: 172.19.0.1, server: _, request: "GET /static/index.html HTTP/1.1", host: "wxdvoid.com"
+2018/08/05 10:08:05 [error] 7#7: *16 open() "/usr/share/nginx/html/static/index.html" failed (2: No such file or directory), client: 172.19.0.1, server: _, request: "GET /static/index.html HTTP/1.1", host: "wxdvoid.com"
+2018/08/05 10:08:07 [error] 7#7: *16 open() "/usr/share/nginx/html/static/index.html" failed (2: No such file or directory), client: 172.19.0.1, server: _, request: "GET /static/index.html HTTP/1.1", host: "wxdvoid.com"
+2018/08/05 10:08:07 [error] 7#7: *16 open() "/usr/share/nginx/html/static/index.html" failed (2: No such file or directory), client: 172.19.0.1, server: _, request: "GET /static/index.html HTTP/1.1", host: "wxdvoid.com"
+2018/08/05 10:46:54 [emerg] 1#1: host not found in upstream "search-movie" in /etc/nginx/nginx.conf:51
+2018/08/05 10:47:42 [error] 7#7: *15 open() "/usr/local/nginx/html/static/wx.mp4" failed (2: No such file or directory), client: 172.19.0.1, server: _, request: "GET /static/wx.mp4 HTTP/1.1", host: "wxdvoid.com"
+2018/08/05 11:44:05 [error] 7#7: *123 open() "/usr/local/nginx/html/static/index.html" failed (2: No such file or directory), client: 172.19.0.1, server: _, request: "GET /static/index.html HTTP/1.1", host: "wxdvoid.com"
+2018/08/05 11:46:31 [emerg] 1#1: host not found in upstream "search-movie" in /etc/nginx/nginx.conf:51
+2018/08/05 11:47:09 [emerg] 1#1: host not found in upstream "search-movie" in /etc/nginx/nginx.conf:51
+2018/08/05 11:47:51 [error] 7#7: *26 open() "/usr/share/nginx/html/static/wx.mp4" failed (2: No such file or directory), client: 172.19.0.1, server: _, request: "GET /static/wx.mp4 HTTP/1.1", host: "wxdvoid.com"
+2018/08/05 11:52:20 [emerg] 1#1: host not found in upstream "search-movie" in /etc/nginx/nginx.conf:51
+2018/08/05 11:53:45 [error] 7#7: *23 "/usr/share/nginx/html/static/index.html" is not found (2: No such file or directory), client: 172.19.0.1, server: _, request: "GET /static/ HTTP/1.1", host: "wxdvoid.com"
+2018/08/05 11:54:42 [emerg] 1#1: host not found in upstream "search-movie" in /etc/nginx/nginx.conf:51
