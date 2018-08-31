@@ -44,7 +44,12 @@ public interface MoviesRepository extends MongoRepository<Movies,String> {
      */
     Page<Movies> findByLanLike(String lan, Pageable pageable);
 
-
-
+    /**
+     * 根据标题查询并按照时间排序
+     * @param title
+     * @param pageable
+     * @return
+     */
+    Page<Movies>findByTitleLikeOrderByYearAsc(String title, Pageable pageable);
 
 }

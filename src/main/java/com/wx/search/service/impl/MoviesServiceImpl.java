@@ -8,6 +8,7 @@ import com.wx.search.repository.MoviesRepository;
 import com.wx.search.service.IMoviesService;
 import com.wx.search.vo.MoviesVO;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;
@@ -61,5 +62,15 @@ public class MoviesServiceImpl implements IMoviesService{
         }
         log.error("搜索的电影资源不存在{}",ResultEnum.MOVIES_NOT_EXIT);
         throw new SearchMovieException(ResultEnum.MOVIES_NOT_EXIT);
+    }
+
+    @Override
+    public Page<MoviesVO> findByTitleLikeOrderByYearAsc(String title, Pageable pageable) {
+       if(StringUtils.isBlank(title)){
+           title="";
+       }
+        Page<Movies> movies = moviesRepository.findByTitleLikeOrderByYearAsc(title, pageable);
+        List<MoviesVO> voList = Movies2MoviesVOConverter.convert(movies.getContent());
+        return new PageImpl<MoviesVO>(voList,pageable,movies.getTotalElements());
     }
 }

@@ -10,10 +10,12 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Sort;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.stereotype.Controller;
 import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
@@ -52,7 +54,7 @@ public class IndexController {
     }
 
     @GetMapping("/list")
-    public ModelAndView test(String q, @RequestParam(defaultValue = "1",required = false) Integer page, Map<String, Object> map){
+    public ModelAndView list(String q, @RequestParam(defaultValue = "1",required = false) Integer page, Map<String, Object> map){
         log.info("检索{}：",q);
         if(StringUtils.isEmpty(q)){
             //throw new  SearchCloudException(ResultEnum.MOVIES_NOT_EXIT);
@@ -66,5 +68,20 @@ public class IndexController {
         map.put("currentPage", page);
         map.put("size", size);
         return new ModelAndView("list", map);
+    }
+
+
+    @PostMapping("/test")
+    @ResponseBody
+    public Page<MoviesVO>test(@RequestParam(value="title",required=false) String title){
+        return moviesService.findByTitleLikeOrderByYearAsc(title,getPageRequest());
+    }
+
+    protected PageRequest getPageRequest(){
+        int page = 0;
+        int size = 10;
+        Sort sort = new Sort(Sort.Direction.ASC, "year");;
+        PageRequest pageRequest = new PageRequest(page, size, sort);
+        return pageRequest;
     }
 }

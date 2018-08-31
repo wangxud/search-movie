@@ -11,4 +11,6 @@ import org.springframework.data.domain.Pageable;
  */
 public interface IMoviesService {
     Page<MoviesVO> findList(String q, Pageable pageable);
+
+    Page<MoviesVO>findByTitleLikeOrderByYearAsc(String title, Pageable pageable);
 }

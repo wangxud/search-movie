@@ -22,39 +22,14 @@
     <link href="https://cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
     <link href="/css/style.css" rel="stylesheet">
 </head>
-<body data-n-head="">
-
-<div data-server-rendered="true" id="__nuxt"><!---->
-    <div id="__layout">
-        <div id="app" class="ub flex-column">
-            <section >
-                <div class="index-bg"></div>
-                <!--header头 start-->
-                    <#include "common/header.ftl">
-                <!--header头 end-->
-                <!--动画start-->
-                <div class="grid"></div>
-                <script src="/js/common/jquery.js"></script>
-                <script src="/js/common/jquery.easing.min.js"></script>
-                <script src="/js/index.js"></script>
-                <script src="/js/common/common.js"></script>
-                <!--动画end-->
-                <div class="index-main">
-                    <div class="index-search  justify-content align-items ub">
-                        <form id="form" method="GET" action="/list" class="ub ub-f1">
-                            <input id="input" type="text" name="q" autocomplete="off" maxlength="40" class="ub-f1">
-                            <button type="submit">搜 索</button>
-                        </form>
-                    </div>
-                </div>
-                <!--页脚 start-->
-                    <#include "common/footer.ftl">
-                <!--页脚 end-->
-            </section>
-        </div>
-    </div>
-
-
-
+<body>
+<div id="SOHUCS" ></div>
+<script charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/changyan.js" ></script>
+<script type="text/javascript">
+    window.changyan.api.config({
+        appid: 'cytMyPBHh',
+        conf: 'prod_62d084b60575208ca3ce21e0562ddc8e'
+    });
+</script>
 </body>
 </html>
