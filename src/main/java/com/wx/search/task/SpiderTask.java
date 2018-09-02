@@ -21,7 +21,7 @@ import java.util.List;
 public class SpiderTask {
     @Autowired
     private MoviesRepository moviesRepository;
-    @Scheduled(cron ="0 11 23 * * ?" )
+    @Scheduled(cron ="0 53 16 * * ?" )
     public void spiderMovies(){
         try {
             moviesRepository.deleteAll();
@@ -32,7 +32,7 @@ public class SpiderTask {
             //BtPicture p=new BtPicture();
             for(int i=2;i<50;i++){
                 //爬取的地址
-                String url="http://www.bttiantangs.com/list/dianying/index_"+i+".html";
+                String url="https://www.bttiantangs.com/list/dianying/index_"+i+".html";
                 JsoupDemo jsoup=new JsoupDemo();
                 //获取某一页的所有电影详情页下的连接
                 List<String> href=jsoup.link(url);

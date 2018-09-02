@@ -43,7 +43,7 @@ public class JsoupDemo {
         List<Movies> ls=new ArrayList<>();
         for(String h:href){
             Movies m=new Movies();
-            Connection conn=Jsoup.connect(h).timeout(30000);
+            Connection conn=Jsoup.connect(h).timeout(60000);
             conn.header("Accept", "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8");
             conn.header("Accept-Encoding", "gzip, deflate, sdch");
             conn.header("Accept-Language", "zh-CN,zh;q=0.8");
@@ -52,7 +52,7 @@ public class JsoupDemo {
             try {
                 doc = conn.get();
             }catch (IOException e){
-                conn=Jsoup.connect("http://www.bttiantangs.com/movie/50680.html").timeout(30000);
+                conn=Jsoup.connect("https://www.bttiantangs.com/movie/50680.html").timeout(60000);
                 doc = conn.get();
                 e.printStackTrace();
             }

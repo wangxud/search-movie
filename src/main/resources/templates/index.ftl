@@ -14,11 +14,7 @@
           content="searchmovie 是一个BT种子、磁力链接、精准高效的为您提供最新最热的bt资源的搜索和下载服务，所有资源均来自互联网，如有侵权，请联系管理员删除。"/>
     <meta data-n-head="true" data-hid="Keywords" name="Keywords"
           content="种子搜索神器,种子搜索,磁力链接,磁力搜索,torrentkitty, 磁力之家"/>
-    <title data-n-head="true">磁力链接搜索</title>
-    <!---->
-    <!--<link data-n-head="true" rel="icon" type="image/x-icon" href="/favicon.ico"/>
-    <link data-n-head="true" rel="apple-touch-startup-image" href="/favicon.ico"/>
-    <link data-n-head="true" rel="apple-touch-icon" href="/favicon.ico"/>-->
+    <title data-n-head="true">磁力搜索</title>
     <link href="https://cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
     <link href="/css/style.css" rel="stylesheet">
 </head>
