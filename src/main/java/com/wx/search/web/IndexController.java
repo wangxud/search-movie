@@ -1,6 +1,8 @@
 package com.wx.search.web;
 
 import com.wx.search.common.ResultVOUtil;
+import com.wx.search.entity.Movies;
+import com.wx.search.repository.MoviesRepository;
 import com.wx.search.service.ApiService;
 import com.wx.search.service.IMoviesService;
 import com.wx.search.vo.MoviesVO;
@@ -14,14 +16,12 @@ import org.springframework.data.domain.Sort;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.stereotype.Controller;
 import org.springframework.util.StringUtils;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.Map;
+import java.util.Optional;
 
 /**
  *
@@ -35,7 +35,7 @@ public class IndexController {
     private ApiService apiService;
 
     @Autowired
-    private MongoTemplate mongoTemplate;
+    private MoviesRepository moviesRepository;
 
     @Autowired
     private IMoviesService moviesService;
@@ -57,8 +57,7 @@ public class IndexController {
     public ModelAndView list(String q, @RequestParam(defaultValue = "1",required = false) Integer page, Map<String, Object> map){
         log.info("检索{}：",q);
         if(StringUtils.isEmpty(q)){
-            //throw new  SearchCloudException(ResultEnum.MOVIES_NOT_EXIT);
-            return new ModelAndView("/");
+            return new ModelAndView("error");
         }
         Integer size=10;
         PageRequest request = new PageRequest(page - 1, size);
@@ -70,18 +69,16 @@ public class IndexController {
         return new ModelAndView("list", map);
     }
 
-
-    @PostMapping("/test")
-    @ResponseBody
-    public Page<MoviesVO>test(@RequestParam(value="title",required=false) String title){
-        return moviesService.findByTitleLikeOrderByYearAsc(title,getPageRequest());
+    @GetMapping("/list/{id}")
+    public String detail(@PathVariable String id, Map<String, Object> map){
+        System.out.println("id===="+id);
+        MoviesVO vo = moviesService.findById(id);
+        map.put("vo",vo);
+        return "detail";
     }
 
-    protected PageRequest getPageRequest(){
-        int page = 0;
-        int size = 10;
-        Sort sort = new Sort(Sort.Direction.ASC, "year");;
-        PageRequest pageRequest = new PageRequest(page, size, sort);
-        return pageRequest;
+    @GetMapping("/message")
+    public String message(){
+        return "message";
     }
 }

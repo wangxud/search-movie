@@ -1,135 +1,119 @@
 <!DOCTYPE html>
 <html data-n-head-ssr data-n-head="">
-<head>
-    <meta data-n-head="true" charset="utf-8"/>
-    <meta data-n-head="true" name="viewport"
-          content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
-    <meta data-n-head="true" name="google-site-verification" content="QP6oOpStGlOgPiFnFIylY6lwXUM9bb0Gb9LI6CSlAmw"/>
-    <meta data-n-head="true" name="apple-mobile-web-app-title" content="傻逼吧"/>
-    <meta data-n-head="true" name="apple-mobile-web-app-capable" content="yes"/>
-    <meta data-n-head="true" name="apple-mobile-web-app-status-bar-style" content="black"/>
-    <meta data-n-head="true" name="format-detection" content="telephone=no, email=no"/>
-    <meta data-n-head="true" name="renderer" content="webkit"/>
-    <meta data-n-head="true" data-hid="description" name="description"
-          content="searchmovie 是一个BT种子、磁力链接、精准高效的为您提供最新最热的bt资源的搜索和下载服务，所有资源均来自互联网，如有侵权，请联系管理员删除。"/>
-    <meta data-n-head="true" data-hid="Keywords" name="Keywords"
-          content="种子搜索神器,种子搜索,磁力链接,磁力搜索,torrentkitty, 磁力之家"/>
-    <title data-n-head="true">${q}_磁力搜索</title>
-    <link href="https://cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/css/style.css" rel="stylesheet">
-</head>
+<#include "common/listheader.ftl">
 <body data-n-head="">
-<div data-server-rendered="true" id="__nuxt"><!---->
+<div data-server-rendered="true" id="__nuxt">
+    <!---->
     <div id="__layout">
         <div id="app" class="ub flex-column">
-            <section>
-                <div class=""></div>
-                <!--header头 start-->
-            <#include "common/header.ftl">
-                <!--header头 end-->
-                <div style="text-align:left;clear:both;margin-top:60px;margin-left:5%">
-                    <div class="flex-container0">
-                    <#list listPage.getContent() as listPages>
-                        <div class="flex-container">
-                            <div class="flex-item"><img src="${listPages.imgUrl}"></div>
-                            <div class="flex-item">
-                                <ul class="list">
-                                    <li><h5>片名：${listPages.title}</h5></li>
-                                    <li><h5>年代：${listPages.year}</h5></li>
-                                    <li><h5>产地：${listPages.country}</h5></li>
-                                    <li><h5>语言：${listPages.lan}</h5></li>
-                                    <li><h5>主演：${listPages.mainActor}</h5></li>
-                                    <li><h5>简介：${listPages.introduce}</h5></li>
-                                    <br>
-                                    <li><h5>下载地址：</h5> <button >点击复制下载地址</button>
-                                        <code>${listPages.downloadUrl}
-                                        </code>
+            <div class="ub-f1">
+                <div class="header ub align-items ">
+                    <div class="header-brand">
+                        <a href="/" title="SearchMovie">SearchMovie</a></div>
+                    <div class="header-search ub-f1">
+                        <form id="form" method="GET" action="/list" class="ub">
+                            <input id="input" type="text" name="q" maxlength="40" autocomplete="off" value="${q}" class="ub-f1">
+                            <button type="submit">搜 索</button></form>
+                    </div>
+                    <div class="header-right ub">
+                        <a href="/message" title="SearchMovie 留言">留言</a>
+                        <a href="/https://github.com/wangxud" title="SearchMovie 我的github">我的github</a></div>
+                </div>
+                <div class="list-container">
+                    <p class="list-info"></p>
+                    <div class="ub">
+                        <div class="list-main ub-f1">
+                            <ul class="list">
+                            <#list listPage.getContent() as listPages>
+                                <li>
+                                    <a href="/list/${listPages.id}" title="${listPages.title}" class="ub">
+                                        <div class="ub-f1">
+                                            <p class="name">${listPages.title}</p></div>
+                                        <div class="info ub space-between">
+                                            <div>年代：
+                                                <strong>${listPages.year}</strong></div>
+                                        </div>
+                                    </a>
+                                </li>
+                            </#list>
+                                <!---->
+                                <!----></ul>
+                            <div class="col-md-12 column">
+                                <ul class="pagination">
+                                <#if currentPage lte 1>
+                                    <li class="disabled"><a >上一页</a></li>
+                                <#else>
+                                    <li class="active"><a  href="/list?q=${q}&page=${currentPage - 1}">上一页</a></li>
+                                </#if>
 
-                                    </li>
+                                <#if listPage.getTotalPages() lte 10 >
+                                    <#list 1..listPage.getTotalPages() as index>
+                                        <#if currentPage == index>
+                                            <li class="disabled"><a  href="/list?q=${q}&page=${index}">${index}</a></li>
+                                        <#else>
+                                            <li class="active"><a  href="/list?q=${q}&page=${index}">${index}</a></li>
+                                        </#if>
+                                    </#list>
+                                </#if>
+
+                                <#if listPage.getTotalPages() gt 10 >
+                                    <#list 1..5 as index>
+                                        <#if currentPage == index>
+                                            <li class="disabled"><a href="/list?q=${q}&page=${index}">${index}</a></li>
+                                        <#else>
+                                            <li class="active"><a href="/list?q=${q}&page=${index}">${index}</a></li>
+                                        </#if>
+                                    </#list>
+
+                                    <#if currentPage == 6>
+                                        <li class="disabled"><a  href="/list?q=${q}&page=${currentPage}">${currentPage}</a></li>
+                                        <li class="active"><a >..</a></li>
+
+                                    <#elseif currentPage == listPage.getTotalPages()-3 >
+                                        <li class="active"><a >..</a></li>
+                                        <li class="disabled"><a  href="/list?q=${q}&page=${currentPage}">${currentPage}</a></li>
+
+                                    <#elseif currentPage gt 6 &&  currentPage lt listPage.getTotalPages()-3>
+                                        <li class="active"><a >..</a></li>
+                                        <li class="disabled"><a  href="/list?q=${q}&page=${currentPage}">${currentPage}</a></li>
+                                        <li class="active"><a >..</a></li>
+
+                                    <#else>
+                                        <li class="active"><a >..</a></li>
+                                    </#if>
+
+                                    <#list listPage.getTotalPages()-2..listPage.getTotalPages() as index>
+                                        <#if currentPage == index>
+                                            <li class="disabled"><a  href="/list?q=${q}&page=${index}">${index}</a></li>
+                                        <#else >
+                                            <li class="active"><a  href="/list?q=${q}&page=${index}">${index}</a></li>
+                                        </#if>
+                                    </#list >
+                                </#if>
+
+                                <#if currentPage == listPage.getTotalPages()>
+                                    <li class="disabled"><a >下一页</a></li>
+                                <#else>
+                                    <li class="active"><a   href="/list?q=${q}&page=${currentPage + 1}">下一页</a></li>
+                                </#if>
                                 </ul>
                             </div>
                         </div>
-                    </#list>
+                        <div class="list-sidebar">
+
+                            <div class="list-declare box">
+                                <strong style="color: red;font-weight: 700">磁力搜索</strong>是一个磁力链接搜索引擎，可以从DHT网络获取到当前的活跃资源，用于DHT网络的学习，分析和研究。内容是本站根据您的指令自动搜索的结果，不代表本站赞成资源的内容或立场，资源的版权归种子制作者所有。
+                                </div></div>
                     </div>
                 </div>
-            <#--分页-->
-                <div class="col-md-12 column">
-                    <ul class="pagination">
-                    <#if currentPage lte 1>
-                        <li class="disabled"><a >上一页</a></li>
-                    <#else>
-                        <li class="active"><a  href="/list?q=${q}&page=${currentPage - 1}">上一页</a></li>
-                    </#if>
-
-                    <#--小于等于10页全部显示-->
-                    <#if listPage.getTotalPages() lte 10 >
-                        <#list 1..listPage.getTotalPages() as index>
-                            <#if currentPage == index>
-                                <li class="disabled"><a  href="/list?q=${q}&page=${index}">${index}</a></li>
-                            <#else>
-                                <li class="active"><a  href="/list?q=${q}&page=${index}">${index}</a></li>
-                            </#if>
-                        </#list>
-                    </#if>
-
-                    <#--大于10页：显示前5页，最后3页，中间用 ...-->
-                    <#if listPage.getTotalPages() gt 10 >
-                    <#--显示前5页-->
-                        <#list 1..5 as index>
-                            <#if currentPage == index>
-                                <li class="disabled"><a href="/list?q=${q}&page=${index}">${index}</a></li>
-                            <#else>
-                                <li class="active"><a href="/list?q=${q}&page=${index}">${index}</a></li>
-                            </#if>
-                        </#list>
-
-                    <#--中间部分的显示 ...  number: currentPage, 区间逻辑的判断-->
-                        <#if currentPage == 6>
-                            <li class="disabled"><a  href="/list?q=${q}&page=${currentPage}">${currentPage}</a></li>
-                            <li class="active"><a >..</a></li>
-
-                        <#elseif currentPage == listPage.getTotalPages()-3 >
-                            <li class="active"><a >..</a></li>
-                            <li class="disabled"><a  href="/list?q=${q}&page=${currentPage}">${currentPage}</a></li>
-
-                        <#elseif currentPage gt 6 &&  currentPage lt listPage.getTotalPages()-3>
-                            <li class="active"><a >..</a></li>
-                            <li class="disabled"><a  href="/list?q=${q}&page=${currentPage}">${currentPage}</a></li>
-                            <li class="active"><a >..</a></li>
-
-                        <#else>
-                            <li class="active"><a >..</a></li>
-                        </#if>
-
-                    <#--显示最后3页-->
-                        <#list listPage.getTotalPages()-2..listPage.getTotalPages() as index>
-                            <#if currentPage == index>
-                                <li class="disabled"><a  href="/list?q=${q}&page=${index}">${index}</a></li>
-                            <#else >
-                                <li class="active"><a  href="/list?q=${q}&page=${index}">${index}</a></li>
-                            </#if>
-                        </#list >
-                    </#if>
-
-                    <#if currentPage == listPage.getTotalPages()>
-                        <li class="disabled"><a >下一页</a></li>
-                    <#else>
-                        <li class="active"><a   href="/list?q=${q}&page=${currentPage + 1}">下一页</a></li>
-                    </#if>
-                    </ul>
-                </div>
-            </section>
-            <div class="footer">
-                <p><a href="javascript:;" data-lang="cn" class="J_Lang">中文（简体）</a><a href="javascript:;" data-lang="tw"
-                                                                                     class="J_Lang">中文（繁體）</a><a
-                        href="javascript:;" data-lang="en" class="J_Lang">English</a></p>
-                <p>
-                    <a href="http://www.miitbeian.gov.cn/" target="_blank">渝ICP备18010196号</a>
-                </p>
             </div>
+        <#include "common/listfooter.ftl">
         </div>
     </div>
-    <script src="/js/common/jquery.js"></script>
-    <script src="/js/common/common.js"></script>
+</div>
+
+
 </body>
+
+
 </html>

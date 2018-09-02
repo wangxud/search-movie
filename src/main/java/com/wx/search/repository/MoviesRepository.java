@@ -50,6 +50,6 @@ public interface MoviesRepository extends MongoRepository<Movies,String> {
      * @param pageable
      * @return
      */
-    Page<Movies>findByTitleLikeOrderByYearAsc(String title, Pageable pageable);
+    Page<Movies>findByTitleLikeOrderByYearDesc(String title, Pageable pageable);
 
 }

@@ -2,6 +2,7 @@ package com.wx.search.web.handler;
 
 import com.wx.search.common.ResultVOUtil;
 import com.wx.search.common.exception.SearchMovieException;
+import com.wx.search.common.exception.ServiceExcepiton;
 import com.wx.search.vo.ResultVO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.web.servlet.error.ErrorAttributes;
@@ -10,6 +11,7 @@ import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.context.request.NativeWebRequest;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -55,5 +57,12 @@ public class SearchMovieExceptionHandler implements ErrorController {
                 return "500";
         }
         return "index";
+    }
+
+    @ExceptionHandler(value = ServiceExcepiton.class)
+    public String handlerServiceHandlerException(ServiceExcepiton e,NativeWebRequest request){
+        String p = request.getParameter("p");
+        System.out.println("错误请求为====="+p);
+        return "error";
     }
 }

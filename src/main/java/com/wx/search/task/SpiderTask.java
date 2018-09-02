@@ -21,7 +21,7 @@ import java.util.List;
 public class SpiderTask {
     @Autowired
     private MoviesRepository moviesRepository;
-    @Scheduled(cron ="0 53 16 * * ?" )
+    @Scheduled(cron ="0 53 13 * * ?" )
     public void spiderMovies(){
         try {
             moviesRepository.deleteAll();
