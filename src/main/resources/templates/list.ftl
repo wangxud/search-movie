@@ -17,7 +17,7 @@
                     </div>
                     <div class="header-right ub">
                         <a href="/message" title="SearchMovie 留言">留言</a>
-                        <a href="/https://github.com/wangxud" title="SearchMovie 我的github">我的github</a></div>
+                        <a href="https://github.com/wangxud" title="SearchMovie 我的github">我的github</a></div>
                 </div>
                 <div class="list-container">
                     <p class="list-info"></p>

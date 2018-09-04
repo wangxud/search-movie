@@ -19,7 +19,7 @@
                     </div>
                     <div class="header-right ub" data-v-325fe1c2>
                         <a href="/message" title="SearchMovie 留言">留言</a>
-                        <a href="/https://github.com/wangxud" title="SearchMovie 我的github">我的github</a></div>
+                        <a href="https://github.com/wangxud" title="SearchMovie 我的github">我的github</a></div>
                 </div>
                 <div class="list-container des ub" data-v-325fe1c2>
                     <div class="list-main ub-f1" data-v-325fe1c2>
@@ -48,7 +48,7 @@
                         <div class="content" data-v-325fe1c2>
                             <div class="ub con-tit align-items" data-v-325fe1c2>
                                 <h3 class="ub-f1" data-v-325fe1c2>磁力链接</h3>
-                                <div data-clipboard-text="magnet:?xt=urn:btih:ad88c29b5fe78b38187ebfc5f466cb8a4c5243c0" class="code-btn" data-v-325fe1c2>[复制]</div></div>
+                                <div onclick="showtoastFromDocumentCenter()"  data-clipboard-text="${vo.downloadUrl}" class="code-btn" data-v-325fe1c2>[复制]</div></div>
                             <div class="content-body" data-v-325fe1c2>
                                 <code class="break-word" data-v-325fe1c2>${vo.downloadUrl}</code></div>
                         </div>
@@ -67,7 +67,21 @@
         </div>
     </div>
 </div>
-<s
-</body>
+    <script src="/js/common/jquery.js"></script>
+    <script src="/js/common/clipboard.min.js"></script>
+    <script src="/js/common/toast.js"></script>
+    <script>
+        var clipboard = new ClipboardJS('.code-btn');
+        clipboard.on('success', function(e) {
+            console.log(e);
+        });
+        clipboard.on('error', function(e) {
+            console.log(e);
+        });
 
+        function showtoastFromDocumentCenter(){
+            showMessage('复制成功',1000,true,'fadeIn','fadeOut');
+        }
+    </script>
+</body>
 </html>

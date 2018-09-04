@@ -13,6 +13,8 @@
     <meta data-n-head="true" data-hid="Keywords" name="Keywords"
           content="SearchMoive,磁力搜索"/>
     <title data-n-head="true">${q}_磁力搜索</title>
+    <link href="/css/animate.css" rel="stylesheet">
     <link href="https://cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
     <link href="/css/cdfab848c6cb2ae31ebf2917aa29c2f7.css" rel="stylesheet">
+    <link href="/css/toast.css" rel="stylesheet">
 </head>
