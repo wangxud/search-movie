@@ -141,3 +141,9 @@
 2018/08/05 11:52:20 [emerg] 1#1: host not found in upstream "search-movie" in /etc/nginx/nginx.conf:51
 2018/08/05 11:53:45 [error] 7#7: *23 "/usr/share/nginx/html/static/index.html" is not found (2: No such file or directory), client: 172.19.0.1, server: _, request: "GET /static/ HTTP/1.1", host: "wxdvoid.com"
 2018/08/05 11:54:42 [emerg] 1#1: host not found in upstream "search-movie" in /etc/nginx/nginx.conf:51
+2018/09/07 15:19:27 [emerg] 1#1: host not found in upstream "search-movie" in /etc/nginx/nginx.conf:50
+2018/09/07 15:27:27 [emerg] 1#1: host not found in upstream "search-movie" in /etc/nginx/nginx.conf:50
+2018/09/07 15:29:58 [emerg] 1#1: host not found in upstream "search-movie" in /etc/nginx/nginx.conf:51
+2018/09/07 15:37:56 [emerg] 1#1: host not found in upstream "search-movie" in /etc/nginx/nginx.conf:46
+2018/09/07 15:37:57 [emerg] 1#1: host not found in upstream "search-movie" in /etc/nginx/nginx.conf:46
+2018/09/07 15:41:41 [emerg] 1#1: host not found in upstream "search-movie" in /etc/nginx/nginx.conf:46
