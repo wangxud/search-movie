@@ -1,4 +1,4 @@
-version: '2.2'
+version: '2'
 
 
 
@@ -16,7 +16,8 @@ services:
        - ./nginx/log/error.log:/var/log/nginx/error.log
 
   mongodb:
-    image:  7231fc79a80a
+    image:  'bitnami/mongodb:latest'
+    # 7231fc79a80a
     restart: always
     container_name: mongodb
     hostname: mongodb
