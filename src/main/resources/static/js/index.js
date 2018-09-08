@@ -1,7 +1,7 @@
-
+//<img src="http://thecodeplayer.com/u/uifaces/'+i+'.jpg" />
 var images = "", count = 50;
 for(var i = 1; i <= count; i++)
-	images += '<img src="http://thecodeplayer.com/u/uifaces/'+i+'.jpg" />';
+	images += '<img src="pic/'+i+'.jpg" />';
 
 $(".grid").append(images);
 
