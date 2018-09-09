@@ -102,7 +102,7 @@
                         <div class="list-sidebar">
 
                             <div class="list-declare box">
-                                <strong style="color: red;font-weight: 700">磁力搜索</strong>是一个磁力链接搜索引擎，可以从DHT网络获取到当前的活跃资源，用于DHT网络的学习，分析和研究。内容是本站根据您的指令自动搜索的结果，不代表本站赞成资源的内容或立场，资源的版权归种子制作者所有。
+                                <strong style="color: red;font-weight: 700">SearchMovie</strong>是一个爬虫引擎，用于爬虫的学习，分析和研究。内容是本站根据您的指令自动搜索的结果，不代表本站赞成资源的内容或立场，资源的版权归种子制作者所有。
                                 </div></div>
                     </div>
                 </div>
