@@ -25,6 +25,8 @@ public class JsoupDemo {
         conn.header("Accept", "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8");
         conn.header("Accept-Encoding", "gzip, deflate, sdch");
         conn.header("Accept-Language", "zh-CN,zh;q=0.8");
+        conn.header("Connection", "keep-alive");
+        conn.ignoreContentType(true);
         conn.header("User-Agent", "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36");
         Document doc=conn.get();
         //System.out.println(doc.html());
@@ -44,9 +46,12 @@ public class JsoupDemo {
         for(String h:href){
             Movies m=new Movies();
             Connection conn=Jsoup.connect(h).timeout(60000);
+            conn.userAgent("Mozilla");
             conn.header("Accept", "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8");
             conn.header("Accept-Encoding", "gzip, deflate, sdch");
             conn.header("Accept-Language", "zh-CN,zh;q=0.8");
+            conn.header("Connection", "keep-alive");
+            conn.ignoreContentType(true);
             conn.header("User-Agent", "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36");
             Document doc;
             try {
