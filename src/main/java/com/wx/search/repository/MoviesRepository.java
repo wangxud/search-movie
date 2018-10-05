@@ -52,4 +52,11 @@ public interface MoviesRepository extends MongoRepository<Movies,String> {
      */
     Page<Movies>findByTitleLikeOrderByYearDesc(String title, Pageable pageable);
 
+    /**
+     * 根据标题查询
+     * @param title
+     * @return
+     */
+    Movies findByTitle(String title);
+
 }

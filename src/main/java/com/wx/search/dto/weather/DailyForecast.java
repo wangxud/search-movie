@@ -1,15 +1,18 @@
-package com.wx.search.vo;
+package com.wx.search.dto.weather;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 
+import java.io.Serializable;
+
 /**
- *
- * @author wangxu
- * @date 2018/7/15
+ * 天气预报
+ * Created by wangxu on 2018/9/28.
  */
 @Data
-public class WeatherResponseVO {
+public class DailyForecast implements Serializable{
+
+    private static final long serialVersionUID = 2687048725177074349L;
+
     /**
      * 预报日期
      */
@@ -30,9 +33,14 @@ public class WeatherResponseVO {
      * 月落时间
      */
     private String ms;
-
-
-    private String temp;
+    /**
+     * 最高温度
+     */
+    private String tmp_max;
+    /**
+     * 最低温度
+     */
+    private String tmp_min;
     /**
      * 白天天气状况代码
      */
@@ -44,7 +52,6 @@ public class WeatherResponseVO {
     /**
      * 白天天气状况描述
      */
-    @JsonProperty(value = "cxd")
     private String cond_txt_d;
     /**
      * 晚间天气状况描述
@@ -57,7 +64,6 @@ public class WeatherResponseVO {
     /**
      * 风向
      */
-    @JsonProperty(value = "wind")
     private String wind_dir;
     /**
      * 风力
@@ -91,6 +97,4 @@ public class WeatherResponseVO {
      * 能见度，单位：公里
      */
     private String vis;
-
-    private String city;
 }

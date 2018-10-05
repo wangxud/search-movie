@@ -33,7 +33,7 @@ function storm()
 			step: function(n){
 				ry = (1-n)*360;
 				tz = (1-n)*1000;
-				$(this).css("transform", "rotateY("+ry+"deg) translateZ("+tz+"px)");
+				//$(this).css("transform", "rotateY("+ry+"deg) translateZ("+tz+"px)");
 			},
 			duration: 3000,
 			easing: 'easeOutQuint',

@@ -21,10 +21,10 @@ import java.util.List;
 public class SpiderTask {
     @Autowired
     private MoviesRepository moviesRepository;
-    @Scheduled(cron ="0 10 23 * * ?" )
+    @Scheduled(cron ="0 09 23 * * ?" )
     public void spiderMovies(){
         try {
-            moviesRepository.deleteAll();
+            //moviesRepository.deleteAll();
             log.info("开始爬虫任务");
             //用来计数
             int k=0;
@@ -40,7 +40,7 @@ public class SpiderTask {
                 for(Movies e:m){
                     System.out.println(e.toString());
                     k++;
-                    if(!StringUtils.isEmpty(e.getDownloadUrl())){
+                    if(StringUtils.isEmpty(moviesRepository.findByTitle(e.getTitle())) && !(StringUtils.isEmpty(e.getDownloadUrl()))){
                         moviesRepository.save(e);
                     }
                 }

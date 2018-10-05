@@ -32,4 +32,11 @@ public class ConstProperties {
      */
     @Value("${weather.url}")
     private String weatherUrl;
+
+
+    @Value("${hf.weather.key}")
+    private String hfWeatherKey;
+
+    @Value("${hf.weather.url}")
+    private String hfWeatherUrl;
 }
