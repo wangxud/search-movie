@@ -19,7 +19,7 @@ import java.util.List;
 public class JsoupDemo {
     public List<String> link(String url) throws Exception{
         //由于获取的连接只是一部分,所以要拼接
-        String link="http://www.bttiantangs.com";
+        String link="https://www.bttiantangs.com";
         List <String > href=new ArrayList<>();
         Connection conn= Jsoup.connect(url).timeout(30000);
         conn.header("Accept", "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8");
