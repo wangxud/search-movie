@@ -54,7 +54,7 @@ public class IndexController {
         return ResultVOUtil.success(userResponse);
     }
 
-    @PostMapping("/list")
+    @RequestMapping("/list")
     public ModelAndView list(String q, @RequestParam(defaultValue = "1",required = false) Integer page, Map<String, Object> map){
         log.info("检索{}：",q);
         if(StringUtils.isEmpty(q)){
