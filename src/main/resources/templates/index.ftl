@@ -37,18 +37,28 @@
                 <!--动画end-->
                 <div class="index-main">
                     <div class="index-search  justify-content align-items ub">
-                        <form id="form" name="myForm" method="post" action="/list" class="ub ub-f1">
+                        <form id="form" name="myForm" method="post" action="/list" class="ub ub-f1" onsubmit="return false;">
                             <input id="input" type="text" name="q" autocomplete="off" maxlength="40" class="ub-f1">
                             <button  type="button" name="submit1" onclick="check(this.form)">搜 索</button>
                         </form>
                         <script type="text/javascript">
-                            function check(form) {
-                                var query=form.q.value;
-                                if(!$.trim(query)){
-                                    form.q.focus();
-                                    return false;
+                            $(document).keyup(function(event){
+                                if(event.keyCode ==13){
+                                    var query=$.trim(form.q.value).length;
+                                    if(query<0 || query==0){
+                                        return;
+                                    }else{
+                                        document.myForm.submit();
+                                    }
                                 }
-                                document.myForm.submit();
+                            });
+                            function check(form) {
+                                var query=$.trim(form.q.value).length;
+                                if(query<0 || query==0){
+                                    return;
+                                }else{
+                                    document.myForm.submit();
+                                }
                             }
                         </script>
                     </div>
