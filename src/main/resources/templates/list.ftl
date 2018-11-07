@@ -49,7 +49,7 @@
                                 <#if listPage.getTotalPages() lte 10 >
                                     <#list 1..listPage.getTotalPages() as index>
                                         <#if currentPage == index>
-                                            <li class="disabled"><a  href="/list?q=${q}&page=${index}">${index}</a></li>
+                                            <li class="disabled"><a  >${index}</a></li>
                                         <#else>
                                             <li class="active"><a  href="/list?q=${q}&page=${index}">${index}</a></li>
                                         </#if>
