@@ -59,23 +59,24 @@
                                 <#if listPage.getTotalPages() gt 10 >
                                     <#list 1..5 as index>
                                         <#if currentPage == index>
-                                            <li class="disabled"><a href="/list?q=${q}&page=${index}">${index}</a></li>
+                                            <li class="disabled"><a >${index}</a></li>
                                         <#else>
                                             <li class="active"><a href="/list?q=${q}&page=${index}">${index}</a></li>
                                         </#if>
                                     </#list>
 
                                     <#if currentPage == 6>
-                                        <li class="disabled"><a  href="/list?q=${q}&page=${currentPage}">${currentPage}</a></li>
+                                        <li class="disabled"><a>${currentPage}</a></li>
                                         <li class="active"><a >..</a></li>
 
                                     <#elseif currentPage == listPage.getTotalPages()-3 >
                                         <li class="active"><a >..</a></li>
-                                        <li class="disabled"><a  href="/list?q=${q}&page=${currentPage}">${currentPage}</a></li>
+                                        <li class="disabled"><a  >${currentPage}</a></li>
 
                                     <#elseif currentPage gt 6 &&  currentPage lt listPage.getTotalPages()-3>
+
                                         <li class="active"><a >..</a></li>
-                                        <li class="disabled"><a  href="/list?q=${q}&page=${currentPage}">${currentPage}</a></li>
+                                        <li class="disabled"><a >${currentPage}</a></li>
                                         <li class="active"><a >..</a></li>
 
                                     <#else>
@@ -84,7 +85,7 @@
 
                                     <#list listPage.getTotalPages()-2..listPage.getTotalPages() as index>
                                         <#if currentPage == index>
-                                            <li class="disabled"><a  href="/list?q=${q}&page=${index}">${index}</a></li>
+                                            <li class="disabled"><a  >${index}</a></li>
                                         <#else >
                                             <li class="active"><a  href="/list?q=${q}&page=${index}">${index}</a></li>
                                         </#if>
